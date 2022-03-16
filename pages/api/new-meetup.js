@@ -8,11 +8,11 @@ async function handler(req, res) {
     const data = req.body;
 
     const client = await MongoClient.connect(
-      'mongodb+srv://anderson:<password>@cluster0.me9ra.mongodb.net/meetups?retryWrites=true&w=majority'
+      'mongodb+srv://anderson:pablotg05@cluster0.me9ra.mongodb.net/Cluster0?retryWrites=true&w=majority'
     );
     const db = client.db();
 
-    const meetupsCollection = db.collection('meetups');
+    const meetupsCollection = db.collection('Cluster0');
 
     const result = await meetupsCollection.insertOne(data);
 
